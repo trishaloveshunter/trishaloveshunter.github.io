@@ -6,7 +6,14 @@ const gif = document.querySelector(".gif");
 // Change text and gif when the Yes button is clicked
 yesBtn.addEventListener("click", () => {
   question.innerHTML = "Yayy I love youu 🥰 ";
-  gif.src = "https://tenor.com/rR97ajL2U6c.gif";
+  
+  // Embed Tenor GIF using innerHTML
+  gif.innerHTML = `
+    <div class="tenor-gif-embed" data-postid="14863710471758531526" data-share-method="host" data-aspect-ratio="1.06667" data-width="100%">
+      <a href="https://tenor.com/view/hug-gif-14863710471758531526">Hug Sticker</a> from <a href="https://tenor.com/search/hug-stickers">Hug Stickers</a>
+    </div>
+    <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+  `;
 });
 
 // Make the No button move randomly on hover
